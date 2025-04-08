@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
 import profile from "../assets/profile.jpg";
-import "./Home.css"; // Import the CSS file
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         Welcome to My Portfolio
       </Typography>
       <Typography variant="body1">
-        Hi, I am Vickey Kumar, a Frontend Developer.
+        Hi, I am Vickey Kumar, a Software Developer.
       </Typography>
       <img src={profile} alt="Vickey Kumar" className="profile-img" />
       <Typography variant="body1">

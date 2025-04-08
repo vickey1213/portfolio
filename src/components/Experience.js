@@ -1,14 +1,50 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
-import "./Experience.css"; // Import the CSS file
+import "./Experience.css";
 
 const Experience = () => {
   return (
     <Container className="experience">
       <Typography variant="h2">Experience</Typography>
+
+      <div className="job">
+        <Typography variant="h3">Front-End Developer</Typography>
+        <Typography variant="h4">ProHance (Aug 2024 - Present)</Typography>
+        <ul>
+          <li>
+            Developed and maintained Chrome extensions, enhancing user
+            interaction and accessibility.
+          </li>
+          <li>
+            Built a feature-rich e-commerce site using React, Next.js, and
+            Tailwind CSS.
+          </li>
+          <li>
+            Created reusable Material-UI components, boosting development
+            efficiency.
+          </li>
+          <li>
+            Utilized third-party APIs for payments, order tracking, and product
+            recommendations.
+          </li>
+          <li>
+            Specialized in UI design and responsive frontend development using
+            React.js, HTML5, CSS3, and JavaScript.
+          </li>
+          <li>
+            Integrated Redux for state management, ensuring consistency and
+            scalability.
+          </li>
+          <li>
+            Collaborated with cross-functional teams to optimize performance and
+            enhance user experiences.
+          </li>
+        </ul>
+      </div>
+
       <div className="job">
         <Typography variant="h3">Front-End Engineer</Typography>
-        <Typography variant="h4">UnicornKart (July 2022 - Present)</Typography>
+        <Typography variant="h4">UnicornKart (July 2022 - Aug 2024)</Typography>
         <ul>
           <li>
             Designed and developed a feature-rich e-commerce website for the US
@@ -38,6 +74,7 @@ const Experience = () => {
           </li>
         </ul>
       </div>
+
       <div className="job">
         <Typography variant="h3">Front-End Intern</Typography>
         <Typography variant="h4">

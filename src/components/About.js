@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
-import "./About.css"; // Import the CSS file
+import "./About.css";
 
 const About = () => {
   return (
@@ -18,7 +18,6 @@ const About = () => {
         <li>Bootstrap, Material-UI ,</li>
         <li>MongoDB, Node.js, Express.js</li>
         <li>Git, npm, Visual Studio Code</li>
-        <li>Python</li>
         <li>Tailwind CSS</li>
       </ul>
     </Container>

@@ -1,29 +1,87 @@
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  width: 100%;
-  margin-top: auto;
+/* Professional Footer with modern design */
+.footer{
+  margin-top:auto;
+  padding:32px 24px;
+  text-align:center;
+  border-top:1px solid var(--glass-border);
+  background: var(--glass);
+  color:var(--muted);
+  position:relative;
 }
 
-.footer p {
-  margin: 0;
+.footer::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
-.footer a {
-  color: #ff9800;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footer .wrap{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
 }
 
-.footer a:hover {
-  color: #fff;
+.footer p{
+  margin:0;
+  font-size:0.95rem;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 10px 0;
+.footer a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:500;
+  transition:all var(--fast) var(--easing);
+  position:relative;
+}
+
+.footer a::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;
+  left:0;
+  width:0;
+  height:1px;
+  background:var(--accent);
+  transition:width var(--fast) var(--easing);
+}
+
+.footer a:hover::after{
+  width:100%;
+}
+
+.footer a:hover{
+  color:var(--accent-light);
+}
+
+.footer{
+  opacity:0;
+  transform:translateY(20px);
+  animation:footerIn var(--slow) var(--easing) forwards;
+  animation-delay:1s;
+}
+
+@keyframes footerIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:768px){
+  .footer .wrap{
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
   }
+  .footer{padding:24px 16px;}
 }
+
+@media(prefers-reduced-motion:reduce){
+  .footer{animation:none}
+}
+

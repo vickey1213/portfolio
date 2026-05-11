@@ -1,82 +1,163 @@
-.contact {
-  padding: 50px 20px;
-  background: #fff;
-  animation: fadeIn 2s ease-in;
+/* Professional Contact form with modern design */
+.contact{
+  padding:clamp(32px,5vw,64px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--glass);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--glass-border);
+  box-shadow:var(--shadow-lg);
+  margin-bottom:40px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.contact h2{
+  text-align:center;
+  margin-bottom:24px;
+  position:relative;
 }
 
-.contact h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
+.contact h2::after{
+  content:'';
+  position:absolute;
+  bottom:-8px;
+  left:50%;
+  transform:translateX(-50%);
+  width:60px;
+  height:3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius:2px;
 }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
+.card{
+  width:100%;
+  max-width:600px;
+  background: linear-gradient(135deg, var(--surface-elevated) 0%, var(--surface) 100%);
+  border-radius:var(--radius-lg);
+  padding:32px;
+  border:1px solid var(--glass-border);
+  box-shadow:var(--shadow-xl);
 }
 
-.contact form .MuiTextField-root {
-  margin-bottom: 20px;
-  width: 100%;
+.contact form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
-.contact button {
-  padding: 10px 20px;
-  background-color: #ff9800;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
+.contact form .MuiTextField-root{
+  width:100%;
 }
 
-.contact button:hover {
-  background-color: #e68a00;
+.contact .card .MuiOutlinedInput-root{
+  background: var(--surface);
+  border-radius:var(--radius);
+  transition:all var(--fast) var(--easing);
 }
 
-.contact p {
-  text-align: center;
-  margin-top: 20px;
-  color: #333;
+.contact .card .MuiOutlinedInput-input{
+  color:var(--text);
+  padding:16px 14px;
+  font-size:1rem;
 }
 
-.contact a {
-  color: #ff9800;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.contact .card .MuiOutlinedInput-notchedOutline{
+  border-color:var(--glass-border);
+  transition:border-color var(--fast) var(--easing);
 }
 
-.contact a:hover {
-  color: #e68a00;
+.contact .card .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+  border-color:var(--accent-light);
 }
 
-@media (max-width: 768px) {
-  .contact {
-    padding: 20px 10px;
-  }
-
-  .contact form {
-    padding: 20px;
-  }
-
-  .contact button {
-    padding: 10px;
-  }
+.contact .card .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(99, 102, 241, 0.1);
 }
+
+.contact .card .MuiInputLabel-root{
+  color:var(--muted);
+  font-weight:500;
+}
+
+.contact .card .MuiInputLabel-root.Mui-focused{
+  color:var(--accent);
+}
+
+.contact .card .MuiInputBase-input::placeholder{
+  color:rgba(161, 161, 170, 0.6);
+  opacity:1;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+.submit-btn{
+  grid-column:1/-1;
+  padding:16px;
+  border-radius:var(--radius);
+  border:none;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color:var(--text);
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  transition:all var(--fast) var(--easing);
+  margin-top:8px;
+}
+
+.submit-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 16px rgba(99, 102, 241, 0.3);
+}
+
+.contact p{
+  color:var(--muted);
+  margin-top:24px;
+  text-align:center;
+  font-size:0.95rem;
+}
+
+.contact p a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:500;
+  transition:color var(--fast) var(--easing);
+}
+
+.contact p a:hover{
+  color:var(--accent-light);
+}
+
+@media(max-width:768px){
+  .contact{padding:clamp(24px,4vw,48px);}
+  .card{padding:24px;}
+  .contact form{grid-template-columns:1fr;}
+  .full{grid-column:1;}
+  .submit-btn{grid-column:1;}
+}
+.contact{padding:clamp(24px,4vw,48px);display:flex;align-items:center;justify-content:center}
+.contact .card{width:100%;max-width:720px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.contact h2{text-align:center;margin-bottom:10px}
+.contact form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact form .MuiTextField-root{width:100%}
+.contact form .full{grid-column:1/-1}
+
+/* Make MUI inputs clearly visible on the dark background */
+.contact .card .MuiOutlinedInput-root{background:rgba(255,255,255,0.02);border-radius:8px}
+.contact .card .MuiOutlinedInput-input{color:#e6eef8;padding:12px 14px}
+.contact .card .MuiOutlinedInput-notchedOutline{border-color:rgba(255,255,255,0.06)}
+.contact .card .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{border-color:var(--accent);box-shadow:0 6px 20px rgba(124,92,255,0.06)}
+.contact .card .MuiInputLabel-root{color:var(--muted)}
+.contact .card .MuiInputLabel-root.Mui-focused{color:var(--accent)}
+.contact .card .MuiInputBase-input::placeholder{color:rgba(230,238,248,0.5);opacity:1}
+
+/* submit button */
+.contact .card .submit-btn{grid-column:1/-1;padding:12px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),#5a44e6);color:#fff;cursor:pointer;transition:transform var(--fast),box-shadow var(--fast)}
+.contact .card .submit-btn:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(124,92,255,0.12)}
+
+.contact p{color:var(--muted);margin-top:10px}
+
+@media(max-width:720px){.contact form{grid-template-columns:1fr}.contact .card{padding:16px}.contact .card .submit-btn{width:100%}}
+

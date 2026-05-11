@@ -1,0 +1,38 @@
+/* Professional scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: var(--text);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--fast) var(--easing);
+  border: 2px solid var(--glass-border);
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.4);
+  border-color: var(--accent);
+}
+
+.scroll-to-top .MuiSvgIcon-root {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+}

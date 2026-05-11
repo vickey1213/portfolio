@@ -1,16 +1,13 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: "#333",
-        color: "#fff",
-        textAlign: "center",
-        padding: "10px 0",
-      }}
-    >
-      <p>&copy; 2024 Vickey Kumar. All rights reserved.</p>
+    <footer className="footer">
+      <div className="wrap">
+        <p>&copy; 2024 Vickey Kumar. All rights reserved.</p>
+        <p><a href="https://github.com/vickey1213" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      </div>
     </footer>
   );
 };

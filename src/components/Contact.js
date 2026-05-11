@@ -31,28 +31,34 @@ const Contact = () => {
   };
 
   return (
-    <Container className="contact">
+    <Container className="contact container">
       <Typography variant="h2">Contact Me</Typography>
-      <form ref={form} onSubmit={sendEmail}>
-        <TextField label="Name" name="user_name" variant="outlined" required />
-        <TextField
-          label="Email"
-          name="user_email"
-          variant="outlined"
-          required
-        />
-        <TextField
-          label="Message"
-          name="message"
-          variant="outlined"
-          required
-          multiline
-          rows={4}
-        />
-        <Button variant="contained" color="primary" type="submit">
-          Send
-        </Button>
-      </form>
+
+      <div className="card">
+        <form ref={form} onSubmit={sendEmail}>
+          <TextField label="Name" name="user_name" variant="outlined" required />
+          <TextField
+            label="Email"
+            name="user_email"
+            variant="outlined"
+            required
+          />
+          <TextField
+            label="Message"
+            name="message"
+            variant="outlined"
+            required
+            multiline
+            rows={4}
+            className="full"
+          />
+
+          <Button className="submit-btn" variant="contained" color="primary" type="submit">
+            Send
+          </Button>
+        </form>
+      </div>
+
       <Typography variant="body1">
         Connect with me on{" "}
         <a

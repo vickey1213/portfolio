@@ -57,9 +57,7 @@ const Experience = () => {
         </div>
 
         <div className="figma-cta">
-          <Button variant="outlined" size="small" href={figmaUrl} target="_blank" rel="noopener" aria-label="Open Figma prototype">
-            Open Figma Prototype
-          </Button>
+      git
         </div>
       </header>
 
